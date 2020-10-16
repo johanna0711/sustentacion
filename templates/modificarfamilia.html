@@ -1,0 +1,13 @@
+{% extends "Unidad_Educativa.html" %}
+{% block title %} Modificar Familia {% endblock %}
+{% block background %}{% load static %}{% static 'img/Alumnos.jpeg' %}{% endblock %}
+
+
+{% block content %}
+    <h2> Modificar Familia</h2>
+    <form method="Post">
+         {% csrf_token %}
+         {{ familiaform.as_p }}
+        <input type = "submit" value = "Modificar Familia"/>
+    </form>
+{% endblock %}

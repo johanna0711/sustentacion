@@ -1,0 +1,13 @@
+{% extends "Unidad_Educativa.html" %}
+{% block title %} Retiro{% endblock %}
+{% block background %}{% load static %}{% static 'img/about-bg.jpg' %}{% endblock %}
+
+
+{% block content %}
+    <h2> Crear Retiro</h2>
+    <form method="Post">
+         {% csrf_token %}
+         {{ retiroform.as_p }}
+        <input type = "submit" value = "Crear retiro"/>
+    </form>
+{% endblock %}
